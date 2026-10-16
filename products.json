@@ -1,1 +1,98 @@
-[{"slug":"al-01","code":"AL-01","name":"Düz Lake","type":"Lake","color":"Kırık Beyaz"},{"slug":"al-02","code":"AL-02","name":"Dikey Kanal Lake","type":"Lake","color":"Kırık Beyaz"},{"slug":"al-03","code":"AL-03","name":"Çerçeveli Lake","type":"Lake","color":"Grej"},{"slug":"al-04","code":"AL-04","name":"Yatay Kanal Lake","type":"Lake","color":"Vizon"},{"slug":"al-05","code":"AL-05","name":"Premium Lake","type":"Lake","color":"Antrasit"},{"slug":"al-06","code":"AL-06","name":"Özel Detay Lake","type":"Lake","color":"Siyah"},{"slug":"am-01","code":"AM-01","name":"Açık Meşe","type":"Laminat","color":"Açık Meşe"},{"slug":"am-02","code":"AM-02","name":"Doğal Meşe","type":"Laminat","color":"Doğal Meşe"},{"slug":"am-03","code":"AM-03","name":"Ceviz","type":"Laminat","color":"Ceviz"},{"slug":"am-04","code":"AM-04","name":"Füme Meşe","type":"Laminat","color":"Füme Meşe"},{"slug":"am-05","code":"AM-05","name":"Modern Ceviz","type":"Laminat","color":"Modern Ceviz"},{"slug":"am-06","code":"AM-06","name":"Koyu Ceviz","type":"Laminat","color":"Koyu Ceviz"}]
+[
+  {
+    "slug": "al-01",
+    "code": "AL-01",
+    "name": "Düz Lake",
+    "type": "Lake",
+    "color": "Kırık Beyaz",
+    "desc": "Minimal, düz yüzeyli lake kapı."
+  },
+  {
+    "slug": "al-02",
+    "code": "AL-02",
+    "name": "Dikey Kanal Lake",
+    "type": "Lake",
+    "color": "Kırık Beyaz",
+    "desc": "Dikey kanal detaylı modern lake kapı."
+  },
+  {
+    "slug": "al-03",
+    "code": "AL-03",
+    "name": "Çerçeveli Lake",
+    "type": "Lake",
+    "color": "Grej",
+    "desc": "Klasik oranların modern yorumu."
+  },
+  {
+    "slug": "al-04",
+    "code": "AL-04",
+    "name": "Yatay Kanal Lake",
+    "type": "Lake",
+    "color": "Taupe",
+    "desc": "Yatay çizgilerle sade ve çağdaş görünüm."
+  },
+  {
+    "slug": "al-05",
+    "code": "AL-05",
+    "name": "Premium Lake",
+    "type": "Lake",
+    "color": "Antrasit",
+    "desc": "Koyu tonlu premium iç mekân çözümü."
+  },
+  {
+    "slug": "al-06",
+    "code": "AL-06",
+    "name": "Özel Detay Lake",
+    "type": "Lake",
+    "color": "Siyah",
+    "desc": "Dekoratif detaylı seçkin seri."
+  },
+  {
+    "slug": "am-01",
+    "code": "AM-01",
+    "name": "Açık Meşe",
+    "type": "Laminat",
+    "color": "Açık Meşe",
+    "desc": "Doğal ve aydınlık ahşap dokusu."
+  },
+  {
+    "slug": "am-02",
+    "code": "AM-02",
+    "name": "Doğal Meşe",
+    "type": "Laminat",
+    "color": "Doğal Meşe",
+    "desc": "Sıcak meşe dokulu modern kapı."
+  },
+  {
+    "slug": "am-03",
+    "code": "AM-03",
+    "name": "Ceviz",
+    "type": "Laminat",
+    "color": "Ceviz",
+    "desc": "Derin ceviz karakteri ve güçlü görünüm."
+  },
+  {
+    "slug": "am-04",
+    "code": "AM-04",
+    "name": "Füme Meşe",
+    "type": "Laminat",
+    "color": "Füme Meşe",
+    "desc": "Sakin gri-kahve tonlarda modern yüzey."
+  },
+  {
+    "slug": "am-05",
+    "code": "AM-05",
+    "name": "Modern Ceviz",
+    "type": "Laminat",
+    "color": "Modern Ceviz",
+    "desc": "Dikey dekoratif detaylı ceviz seri."
+  },
+  {
+    "slug": "am-06",
+    "code": "AM-06",
+    "name": "Koyu Ceviz",
+    "type": "Laminat",
+    "color": "Koyu Ceviz",
+    "desc": "Koyu ahşap tonlarında sofistike görünüm."
+  }
+]
