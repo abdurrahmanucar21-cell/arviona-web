@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import data from '../../products.json';
+export default function Page(){return <main className="section"><span className="eyebrow">ARVIONA COLLECTIONS</span><h1>Kapı Koleksiyonları</h1><div className="grid">{data.map((p)=><Link className="product" href={'/urunler/'+p.slug} key={p.slug}><div className="door"></div><h3>{p.code} · {p.name}</h3><p>{p.type} · {p.color}</p></Link>)}</div></main>}
