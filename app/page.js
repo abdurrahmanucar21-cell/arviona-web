@@ -1,27 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 
-const lake=[
-  ["al-01","AL-01","Düz Lake"],["al-02","AL-02","Dikey Kanal Lake"],["al-03","AL-03","Çerçeveli Lake"],
-  ["al-04","AL-04","Yatay Kanal Lake"],["al-05","AL-05","Premium Lake"],["al-06","AL-06","Özel Detay Lake"]
-];
-const laminate=[
-  ["am-01","AM-01","Açık Meşe"],["am-02","AM-02","Doğal Meşe"],["am-03","AM-03","Ceviz"],
-  ["am-04","AM-04","Füme Meşe"],["am-05","AM-05","Modern Ceviz"],["am-06","AM-06","Koyu Ceviz"]
-];
-function ProductRow({items}){return <div className="productRow">{items.map(([slug,code,name])=><Link href={`/urunler/${slug}`} className="productCard" key={slug}><img src={`/products/${slug}.webp`} alt={`${code} ${name}`}/><b>{code}</b><span>{name}</span></Link>)}</div>}
-
-export default function Home(){return <main>
-  <section className="hero">
-    <img src="/hero.webp" alt="ARVIONA modern iç mekân konsepti"/>
-    <div className="heroShade"></div>
-    <div className="heroCopy"><span>ARVIONA · COLLECTION 2026</span><h1>Mekânın karakteri,<br/>detaylarda başlar.</h1><p>İç mekân kapıları, mutfak ve banyo çözümlerinde yalın tasarım; proje ölçeğinde esnek üretim yaklaşımı.</p><div className="actions"><Link className="btn light" href="/urunler">Koleksiyonları Keşfet</Link> <Link className="textLink" href="/teklif">Projeniz İçin Teklif Al →</Link></div></div>
-  </section>
-  <section className="categories">
-    <Link href="/urunler" className="cat"><img src="/door-category.webp" alt="ARVIONA iç mekân kapıları"/><div><span className="eyebrow">DOORS</span><h2>İç Mekân Kapıları</h2><p>Lake ve laminat koleksiyonları</p></div></Link>
-    <Link href="/mutfak" className="cat"><img src="/kitchen-category.webp" alt="ARVIONA mutfak sistemleri"/><div><span className="eyebrow">KITCHENS</span><h2>Mutfak Sistemleri</h2><p>Modern ve proje odaklı</p></div></Link>
-    <Link href="/banyo" className="cat"><img src="/bath-category.webp" alt="ARVIONA banyo mobilyaları"/><div><span className="eyebrow">BATHROOMS</span><h2>Banyo Mobilyaları</h2><p>Sade çizgiler, güçlü detaylar</p></div></Link>
-  </section>
-  <section className="collection"><div className="sectionHead"><div><span className="eyebrow">LAKE COLLECTION</span><h2>Lake Serisi</h2><p>Rafine yüzeyler ve yalın detaylar.</p></div><Link href="/urunler">Tüm modeller →</Link></div><ProductRow items={lake}/></section>
-  <section className="collection"><div className="sectionHead"><div><span className="eyebrow">LAMINATE COLLECTION</span><h2>Laminat Serisi</h2><p>Doğal ahşap karakterinin modern yorumu.</p></div><Link href="/urunler">Tüm modeller →</Link></div><ProductRow items={laminate}/></section>
-  <section className="projectBand"><img src="/project-concept.webp" alt="ARVIONA profesyonel proje konsepti"/><div><span className="eyebrow">FOR PROFESSIONALS</span><h2>Projeler için tasarlandı.</h2><p>Mimarlar, yükleniciler ve proje ekipleri için; toplu konut, otel, villa ve ticari projelerde ürün seçimi, ölçülendirme ve teklif sürecini proje bazında ele alıyoruz.</p><Link className="btn light" href="/profesyoneller">Profesyoneller İçin</Link></div></section>
-</main>}
+const lake=[["al-01","AL-01","Düz Lake"],["al-02","AL-02","Dikey Kanal Lake"],["al-03","AL-03","Çerçeveli Lake"],["al-04","AL-04","Yatay Kanal Lake"],["al-05","AL-05","Premium Lake"],["al-06","AL-06","Özel Detay Lake"]];
+const laminate=[["am-01","AM-01","Açık Meşe"],["am-02","AM-02","Doğal Meşe"],["am-03","AM-03","Ceviz"],["am-04","AM-04","Füme Meşe"],["am-05","AM-05","Modern Ceviz"],["am-06","AM-06","Koyu Ceviz"]];
+function ProductRow({items}){return <div className="productRow">{items.map(([slug,code,name])=><Link href={`/urunler/${slug}`} className="productCard" key={slug}><Image src={`/products/${slug}.webp`} alt={`${code} ${name}`} width={520} height={780} sizes="(max-width:520px) 50vw,(max-width:900px) 33vw,17vw"/><b>{code}</b><span>{name}</span></Link>)}</div>}
+export default function Home(){return <main><section className="hero"><Image src="/hero.webp" alt="ARVIONA modern iç mekân konsepti" fill priority sizes="100vw"/><div className="heroShade"></div><div className="heroCopy"><span>ARVIONA · COLLECTION 2026</span><h1>Mekânın karakteri,<br/>detaylarda başlar.</h1><p>İç mekân kapıları, mutfak ve banyo çözümlerinde yalın tasarım; proje ölçeğinde esnek üretim yaklaşımı.</p><div className="actions"><Link className="btn light" href="/urunler">Koleksiyonları Keşfet</Link><Link className="textLink" href="/teklif">Projeniz İçin Teklif Al →</Link></div></div></section><section className="categories"><Link href="/urunler" className="cat"><Image src="/door-category.webp" alt="ARVIONA iç mekân kapıları" fill sizes="(max-width:900px) 100vw,33vw"/><div><span className="eyebrow">DOORS</span><h2>İç Mekân Kapıları</h2><p>Lake ve laminat koleksiyonları</p></div></Link><Link href="/mutfak" className="cat"><Image src="/kitchen-category.webp" alt="ARVIONA mutfak sistemleri" fill sizes="(max-width:900px) 100vw,33vw"/><div><span className="eyebrow">KITCHENS</span><h2>Mutfak Sistemleri</h2><p>Modern ve proje odaklı</p></div></Link><Link href="/banyo" className="cat"><Image src="/bath-category.webp" alt="ARVIONA banyo mobilyaları" fill sizes="(max-width:900px) 100vw,33vw"/><div><span className="eyebrow">BATHROOMS</span><h2>Banyo Mobilyaları</h2><p>Sade çizgiler, güçlü detaylar</p></div></Link></section><section className="collection"><div className="sectionHead"><div><span className="eyebrow">LAKE COLLECTION</span><h2>Lake Serisi</h2><p>Rafine yüzeyler ve yalın detaylar.</p></div><Link href="/urunler">Tüm modeller →</Link></div><ProductRow items={lake}/></section><section className="collection"><div className="sectionHead"><div><span className="eyebrow">LAMINATE COLLECTION</span><h2>Laminat Serisi</h2><p>Doğal ahşap karakterinin modern yorumu.</p></div><Link href="/urunler">Tüm modeller →</Link></div><ProductRow items={laminate}/></section><section className="projectBand"><div className="projectVisual"><Image src="/project-concept.webp" alt="ARVIONA profesyonel proje konsepti" fill sizes="(max-width:900px) 100vw,58vw"/></div><div><span className="eyebrow">FOR PROFESSIONALS</span><h2>Projeler için tasarlandı.</h2><p>Mimarlar, yükleniciler ve proje ekipleri için; toplu konut, otel, villa ve ticari projelerde ürün seçimi, ölçülendirme ve teklif sürecini proje bazında ele alıyoruz.</p><Link className="btn light" href="/profesyoneller">Profesyoneller İçin</Link></div></section></main>
