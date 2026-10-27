@@ -1,4 +1,5 @@
 import './style.css';
+import './configurator.css';
 import Link from 'next/link';
 
 export const metadata={metadataBase:new URL('https://arvionahome.com'),title:{default:'ARVIONA | Kapı · Mutfak · Banyo',template:'%s | ARVIONA'},description:'ARVIONA; iç mekân kapıları, mutfak ve banyo koleksiyonlarıyla konut, villa, otel ve profesyonel projeler için tasarım odaklı çözümler sunar.',keywords:['ARVIONA','iç mekan kapısı','lake kapı','laminat kapı','mutfak','banyo mobilyası','proje kapıları'],alternates:{canonical:'/'},robots:{index:true,follow:true},openGraph:{title:'ARVIONA | Kapı · Mutfak · Banyo',description:'Modern yaşam alanları ve profesyonel projeler için tasarım odaklı koleksiyonlar.',url:'https://arvionahome.com',siteName:'ARVIONA',type:'website',locale:'tr_TR'},twitter:{card:'summary_large_image',title:'ARVIONA | Kapı · Mutfak · Banyo',description:'Modern yaşam alanları ve profesyonel projeler için tasarım odaklı koleksiyonlar.'},icons:{icon:'/favicon.svg'},manifest:'/manifest.webmanifest'};
