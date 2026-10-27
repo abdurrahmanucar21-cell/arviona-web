@@ -1,3 +1,6 @@
 import Link from 'next/link';
 import data from '../../products.json';
-export default function Page(){return <main className="section"><span className="eyebrow">ARVIONA COLLECTIONS</span><h1>Kapı Koleksiyonları</h1><div className="grid">{data.map((p)=><Link className="product" href={'/urunler/'+p.slug} key={p.slug}><div className="door"></div><h3>{p.code} · {p.name}</h3><p>{p.type} · {p.color}</p></Link>)}</div></main>}
+
+export const metadata={title:'Kapı Koleksiyonları',description:'ARVIONA lake ve laminat iç mekân kapı koleksiyonları.'};
+
+export default function Page(){return <main className="page"><section className="pageHero"><span className="eyebrow">ARVIONA DOORS</span><h1>Kapı Koleksiyonları</h1><p>Lake ve laminat yüzeylerde 12 model. Konut, villa, otel ve toplu projeler için sade, çağdaş ve proje odaklı iç mekân kapıları.</p></section><section className="gridProducts">{data.map((p)=><Link className="productCard large" href={'/urunler/'+p.slug} key={p.slug}><img src={`/products/${p.slug}.webp`} alt={`${p.code} ${p.name} ARVIONA iç mekân kapısı`}/><h3>{p.code} · {p.name}</h3><span>{p.type} · {p.color}</span><p>{p.description||p.shortDescription||'ARVIONA iç mekân kapı koleksiyonu.'}</p></Link>)}</section></main>
