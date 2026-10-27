@@ -1,1 +1,1 @@
-export default function robots(){return {rules:{userAgent:'*',allow:'/'},sitemap:'https://arviona-web.vercel.app/sitemap.xml'}}
+export default function robots(){return {rules:{userAgent:'*',allow:'/'},sitemap:'https://arvionahome.com/sitemap.xml'}}
