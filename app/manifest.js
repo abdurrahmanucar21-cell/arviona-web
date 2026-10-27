@@ -1,0 +1,1 @@
+export default function manifest(){return {name:'ARVIONA',short_name:'ARVIONA',description:'Kapı, mutfak ve banyo koleksiyonları.',start_url:'/',display:'standalone',background_color:'#f4f1eb',theme_color:'#15130f',lang:'tr'}}
