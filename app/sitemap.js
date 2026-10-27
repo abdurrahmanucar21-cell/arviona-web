@@ -1,0 +1,2 @@
+import data from '../products.json';
+export default function sitemap(){const base='https://arviona-web.vercel.app';const pages=['','/urunler','/mutfak','/banyo','/projeler','/profesyoneller','/kataloglar','/kurumsal','/iletisim','/teklif'];return [...pages.map(p=>({url:base+p,lastModified:new Date(),changeFrequency:p===''?'weekly':'monthly',priority:p===''?1:.8})),...data.map(p=>({url:`${base}/urunler/${p.slug}`,lastModified:new Date(),changeFrequency:'monthly',priority:.7}))]}
