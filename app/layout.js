@@ -2,6 +2,7 @@ import './style.css';
 import './configurator.css';
 import './polish.css';
 import './room-polish.css';
+import './final-fixes.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
