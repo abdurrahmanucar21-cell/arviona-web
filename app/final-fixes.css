@@ -1,69 +1,8 @@
-/* ARVIONA V1 final responsive overrides */
-.brandImageLockup{display:flex!important;align-items:center!important;justify-content:flex-start!important;width:250px!important;height:58px!important;min-width:0!important;overflow:visible!important}
-.brandImageLockup img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:auto!important;max-height:56px!important;object-fit:contain!important;object-position:left center!important}
-.brandTextLockup{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;white-space:nowrap;line-height:1}
-.brandText{display:block;color:#f3f0e9;font-family:Arial,sans-serif;font-size:29px;font-weight:300;letter-spacing:6px;line-height:1}
-.brandA{color:#d0a969;font-weight:500}
-.brandDescriptor{display:block;margin-top:7px;color:#d0a969;font-size:6.5px;font-weight:700;letter-spacing:2px;line-height:1.1}
-footer .brandText{font-size:31px}
-.top{grid-template-columns:minmax(210px,260px) minmax(0,1fr) auto!important;gap:18px!important}
-.top .logo{overflow:visible!important}
-.imageHero>img,.premiumHero>img,.visualGrid figure img,.premiumCat>img,.configShowcaseVisual img,.professionalHome>img{display:block!important;visibility:visible!important;opacity:1!important}
-.visualGrid figure{background:#d9d3ca!important}
-.cabinetScene.realisticRoom{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;isolation:isolate!important}
-.kitchenScene.realisticRoom{background-image:linear-gradient(rgba(12,12,11,.10),rgba(12,12,11,.20)),url('/kitchen-category.webp')!important}
-.bathScene.realisticRoom{background-image:linear-gradient(rgba(12,12,11,.08),rgba(12,12,11,.18)),url('/bath-category.webp')!important}
-.realisticRoom>.roomWall,.realisticRoom>.roomFloor{display:none!important}
-.realisticRoom .cabinetBody,.realisticRoom .upperCabinet,.realisticRoom .counter,.realisticRoom .backsplash,.realisticRoom .sink,.realisticRoom .appliance,.realisticRoom .mirror,.realisticRoom .basin,.realisticRoom .showerGlass,.realisticRoom .bathLight{visibility:visible!important;opacity:1!important}
-.kitchenIsland{display:none!important}
-.furnitureStage{overflow:hidden!important}
-@media(max-width:900px){
- .top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;height:auto!important;min-height:76px!important;padding:10px 16px!important;gap:8px 12px!important}
- .top .logo{grid-column:1!important;grid-row:1!important;min-width:0!important}
- .brandImageLockup{width:min(220px,58vw)!important;height:50px!important}
- .brandImageLockup img{max-height:48px!important}
- .brandText{font-size:25px;letter-spacing:4.5px}
- .brandDescriptor{font-size:5.5px;letter-spacing:1.45px;margin-top:6px}
- .topCta{grid-column:2!important;grid-row:1!important;height:40px!important;padding:9px 12px!important;font-size:11px!important}
- .top nav{grid-column:1/3!important;grid-row:2!important;width:100%!important;display:flex!important;justify-content:flex-start!important;overflow-x:auto!important;white-space:nowrap!important;gap:20px!important;padding:2px 0!important}
- .top nav a{padding:8px 0!important}
- .imageHero{height:520px!important;min-height:520px!important;position:relative!important;overflow:hidden!important}
- .imageHero>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
- .visualCollection{display:block!important;padding:42px 16px!important}
- .visualGrid{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:none!important;gap:12px!important;width:100%!important}
- .visualGrid figure,.visualGrid .visualLarge{display:block!important;position:relative!important;grid-column:auto!important;grid-row:auto!important;width:100%!important;height:300px!important;min-height:300px!important;margin:0!important;overflow:hidden!important}
- .visualGrid figure img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
- .configLayout{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
- .furnitureStage,.doorStage{position:relative!important;top:auto!important;width:100%!important;display:block!important}
- .cabinetScene,.roomWall{display:block!important;visibility:visible!important;opacity:1!important}
- .cabinetScene.realisticRoom{height:520px!important;min-height:520px!important;background-position:center!important}
- .kitchenScene.realisticRoom{background-position:center center!important}
- .bathScene.realisticRoom{background-position:center center!important}
- .premiumCategories{grid-template-columns:1fr!important}
- .premiumCat{height:430px!important;min-height:430px!important}
- .premiumCat>img{object-fit:cover!important}
- .configShowcase{grid-template-columns:1fr!important}
- .configShowcaseVisual{display:block!important;position:relative!important;min-height:390px!important}
- .configShowcaseVisual img{object-fit:cover!important}
-}
-@media(max-width:560px){
- .brandImageLockup{width:min(190px,56vw)!important;height:44px!important}
- .brandImageLockup img{max-height:42px!important}
- .brandText{font-size:21px;letter-spacing:3.5px}
- .brandDescriptor{font-size:4.8px;letter-spacing:1.05px}
- .top{padding:8px 12px!important}
- .topCta{padding:8px 10px!important;font-size:10px!important}
- .imageHero{height:470px!important;min-height:470px!important}
- .imageHero>div{left:20px!important;right:20px!important;max-width:none!important}
- .imageHero h1{font-size:40px!important;line-height:1.03!important}
- .visualGrid figure,.visualGrid .visualLarge{height:260px!important;min-height:260px!important}
- .cabinetScene.realisticRoom{height:440px!important;min-height:440px!important}
- .furnitureStage{padding:8px!important}
- .selectionSummary{display:grid!important;grid-template-columns:1fr!important}
- .premiumHero{height:600px!important;min-height:600px!important}
- .premiumHeroCopy{top:39%!important}
- .premiumHeroCopy h1{font-size:38px!important}
- .heroMetrics{display:none!important}
- .premiumCat{height:390px!important;min-height:390px!important}
- .configShowcaseVisual{min-height:310px!important}
-}
+/* ARVIONA responsive + brand overrides */
+.brandImageLockup{display:flex!important;align-items:center!important;justify-content:flex-start!important;width:250px!important;height:58px!important;min-width:0!important;overflow:visible!important}.brandImageLockup img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:auto!important;max-height:56px!important;object-fit:contain!important;object-position:left center!important}.brandTextLockup{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;white-space:nowrap;line-height:1}.brandText{display:block;color:#f3f0e9;font-family:Arial,sans-serif;font-size:29px;font-weight:300;letter-spacing:6px;line-height:1}.brandA{color:#d0a969;font-weight:500}.brandDescriptor{display:block;margin-top:7px;color:#d0a969;font-size:6.5px;font-weight:700;letter-spacing:2px;line-height:1.1}footer .brandText{font-size:31px}.top{grid-template-columns:minmax(210px,260px) minmax(0,1fr) auto!important;gap:18px!important}.top .logo{overflow:visible!important}.imageHero>img,.visualGrid figure img,.configShowcaseVisual img,.professionalHome>img{display:block!important;visibility:visible!important;opacity:1!important}.cabinetScene.realisticRoom{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;isolation:isolate!important}.kitchenScene.realisticRoom{background-image:linear-gradient(rgba(12,12,11,.10),rgba(12,12,11,.20)),url('/kitchen-category.webp')!important}.bathScene.realisticRoom{background-image:linear-gradient(rgba(12,12,11,.08),rgba(12,12,11,.18)),url('/bath-category.webp')!important}.realisticRoom>.roomWall,.realisticRoom>.roomFloor{display:none!important}.realisticRoom .cabinetBody,.realisticRoom .upperCabinet,.realisticRoom .counter,.realisticRoom .backsplash,.realisticRoom .sink,.realisticRoom .appliance,.realisticRoom .mirror,.realisticRoom .basin,.realisticRoom .showerGlass,.realisticRoom .bathLight{visibility:visible!important;opacity:1!important}.kitchenIsland{display:none!important}.furnitureStage{overflow:hidden!important}
+
+/* Zebrano-inspired editorial home — original ARVIONA identity */
+.zHome{background:#f3f0e9;color:#151411}.zHero{height:calc(100vh - 82px);min-height:650px;max-height:920px;position:relative;overflow:hidden;background:#171613;color:#fff}.zHero>img{object-fit:cover!important;object-position:center!important;filter:none!important;transform:none!important}.zHeroShade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,8,7,.72) 0%,rgba(8,8,7,.35) 43%,rgba(8,8,7,.06) 74%),linear-gradient(0deg,rgba(0,0,0,.32),transparent 40%)}.zHeroCopy{position:absolute;z-index:2;left:5.5vw;bottom:10vh;width:min(680px,52vw)}.zHeroCopy>span,.zStatement>span,.zCollectionsHead>span,.zProjectCopy>span,.zConfig>span,.zFinal>span{font-size:10px;letter-spacing:3.5px;font-weight:700;color:#d7ae6c}.zHeroCopy h1{font:clamp(54px,5.5vw,88px)/.96 Georgia,serif;letter-spacing:-2.5px;margin:18px 0 22px;text-shadow:0 2px 20px rgba(0,0,0,.2)}.zHeroCopy p{max-width:570px;font-size:16px;line-height:1.7;color:#eeeae3;margin:0 0 30px}.zHeroActions{display:flex;gap:26px;align-items:center;flex-wrap:wrap}.zHeroActions a{font-size:12px;font-weight:700;letter-spacing:.4px;border-bottom:1px solid #ffffff88;padding:0 0 8px}.zHeroActions a:first-child{background:#f0ece4;color:#151411;border:0;padding:15px 22px}.zHeroIndex{position:absolute;z-index:2;right:4vw;bottom:4vh;display:flex;gap:15px;align-items:center}.zHeroIndex b{font:30px Georgia;color:#d7ae6c}.zHeroIndex span{font-size:9px;letter-spacing:2px;color:#ddd}.zStatement{padding:120px 8vw 110px;background:#f3f0e9;display:grid;grid-template-columns:.35fr 1.15fr .7fr;gap:55px;align-items:start}.zStatement h2,.zCollectionsHead h2,.zProjectCopy h2,.zConfig h2,.zFinal h2{font:clamp(42px,4.4vw,68px)/1.02 Georgia,serif;letter-spacing:-1.5px;margin:0}.zStatement p,.zCollectionsHead p,.zProjectCopy p,.zConfig>p{font-size:15px;line-height:1.85;color:#696157;margin:5px 0 0}.zCollectionsHead{padding:90px 6vw 45px;background:#fff;display:grid;grid-template-columns:.3fr 1fr .7fr;gap:45px;align-items:end}.zCollections{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#fff}.zCollection{height:min(70vw,720px);min-height:560px;position:relative;overflow:hidden;color:#fff;background:#26231f}.zCollection>img{object-fit:cover!important;object-position:center!important;filter:none!important;image-rendering:auto}.zCollectionShade{position:absolute;z-index:1;inset:0;background:linear-gradient(0deg,rgba(8,8,7,.78) 0%,rgba(8,8,7,.12) 58%,rgba(8,8,7,.02) 100%)}.zCollectionCopy{position:absolute;z-index:2;left:36px;right:30px;bottom:38px}.zCollectionCopy span{font-size:10px;letter-spacing:2.5px;color:#d9b579}.zCollectionCopy h3{font:clamp(34px,3vw,48px)/1 Georgia,serif;margin:12px 0}.zCollectionCopy p{font-size:10px;letter-spacing:2px;margin:0 0 22px;color:#ddd}.zCollectionCopy b{font-size:12px;border-bottom:1px solid #ffffff77;padding-bottom:7px}.zProject{display:grid;grid-template-columns:1.35fr .65fr;min-height:720px;background:#e7e1d8}.zProjectVisual{position:relative;min-height:720px;overflow:hidden}.zProjectVisual img{object-fit:cover!important;filter:none!important}.zProjectCopy{padding:100px 5vw;align-self:center}.zProjectCopy h2{font-size:clamp(42px,4vw,62px);margin:18px 0 24px}.zStats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #c6bdb0;border-bottom:1px solid #c6bdb0;margin:35px 0}.zStats div{padding:22px 0}.zStats b{display:block;font:31px Georgia;color:#9d743e}.zStats small{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#6b6257}.zDarkButton{display:inline-flex;background:#171512;color:#fff;padding:15px 20px;font-size:12px;font-weight:700}.zConfig{background:#11100e;color:#fff;text-align:center;padding:120px 7vw}.zConfig h2{max-width:850px;margin:20px auto}.zConfig>p{color:#aaa39a;max-width:650px;margin:25px auto 38px}.zConfig>div{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.zConfig a{border:1px solid #ffffff35;padding:15px 22px;font-size:12px;font-weight:700}.zConfig a:hover{background:#fff;color:#111}.zFinal{background:#f3f0e9;padding:120px 7vw;text-align:center}.zFinal h2{margin:20px auto 34px}.zFinal a{display:inline-block;background:#171512;color:#fff;padding:16px 24px;font-size:12px;font-weight:700}
+
+@media(max-width:900px){.top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;height:auto!important;min-height:76px!important;padding:10px 16px!important;gap:8px 12px!important}.top .logo{grid-column:1!important;grid-row:1!important;min-width:0!important}.brandText{font-size:25px;letter-spacing:4.5px}.brandDescriptor{font-size:5.5px;letter-spacing:1.45px;margin-top:6px}.topCta{grid-column:2!important;grid-row:1!important;height:40px!important;padding:9px 12px!important;font-size:11px!important}.top nav{grid-column:1/3!important;grid-row:2!important;width:100%!important;display:flex!important;justify-content:flex-start!important;overflow-x:auto!important;white-space:nowrap!important;gap:20px!important;padding:2px 0!important}.top nav a{padding:8px 0!important}.imageHero{height:520px!important;min-height:520px!important;position:relative!important;overflow:hidden!important}.imageHero>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}.configLayout{display:grid!important;grid-template-columns:1fr!important;width:100%!important}.furnitureStage,.doorStage{position:relative!important;top:auto!important;width:100%!important;display:block!important}.cabinetScene.realisticRoom{height:520px!important;min-height:520px!important}.zHero{height:680px;min-height:680px}.zHeroCopy{left:24px;right:24px;bottom:72px;width:auto}.zHeroCopy h1{font-size:50px}.zHeroCopy p{font-size:14px}.zHeroIndex{display:none}.zStatement,.zCollectionsHead{grid-template-columns:1fr;padding:75px 24px;gap:20px}.zCollections{grid-template-columns:1fr}.zCollection{height:560px;min-height:560px}.zProject{grid-template-columns:1fr}.zProjectVisual{min-height:520px}.zProjectCopy{padding:70px 24px}.zConfig,.zFinal{padding:90px 24px}}
+@media(max-width:560px){.brandText{font-size:21px;letter-spacing:3.5px}.brandDescriptor{font-size:4.8px;letter-spacing:1.05px}.top{padding:8px 12px!important}.topCta{padding:8px 10px!important;font-size:10px!important}.zHero{height:610px;min-height:610px}.zHeroCopy{bottom:48px}.zHeroCopy h1{font-size:41px;line-height:1}.zHeroCopy>span{font-size:8px;letter-spacing:2px}.zHeroActions{gap:14px}.zHeroActions a{font-size:10px}.zStatement h2,.zCollectionsHead h2,.zProjectCopy h2,.zConfig h2,.zFinal h2{font-size:40px}.zCollection{height:470px;min-height:470px}.zCollectionCopy{left:24px;bottom:28px}.zProjectVisual{min-height:390px}.zStats{grid-template-columns:1fr 1fr}}
