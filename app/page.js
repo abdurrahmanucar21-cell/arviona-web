@@ -2,32 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 
 const collections=[
-  ["/urunler","/door-category.webp","01 — KAPI","İç Mekân Kapıları","DOĞAL. SADE. ZAMANSIZ."],
-  ["/mutfak","/kitchen-category.webp","02 — MUTFAK","Mutfak Sistemleri","RAFİNE. İŞLEVSEL. ÖZGÜN."],
-  ["/banyo","/bath-category.webp","03 — BANYO","Banyo Mobilyaları","SAKİN. MODERN. DENGELİ."]
+  ["/urunler","/door-category.webp","KAPILAR","Zarif detaylar, zamansız tasarımlar."],
+  ["/mutfak","/kitchen-category.webp","MUTFAK","Fonksiyonel ve modern yaşam alanları."],
+  ["/banyo","/bath-category.webp","BANYO","Şıklık ve konfor bir arada."]
 ];
 
-export default function Home(){return <main className="zHome">
-  <section className="zHero">
-    <Image src="/hero.webp" alt="ARVIONA modern iç mekân" fill priority quality={100} sizes="100vw"/>
+export default function Home(){return <main className="zHome approvedHome">
+  <section className="zHero approvedHero">
+    <Image src="/hero.webp" alt="ARVIONA modern yaşam alanı" fill priority quality={100} sizes="100vw"/>
     <div className="zHeroShade"/>
-    <div className="zHeroCopy">
-      <span>ARVIONA · KITCHEN · DOOR SYSTEMS · INTERIOR</span>
-      <h1>Mekânın karakteri.<br/>Detaylarda başlar.</h1>
-      <p>Kapı, mutfak ve banyo sistemlerinde çağdaş tasarım; güçlü malzeme dili ve projeye özel üretim.</p>
-      <div className="zHeroActions"><Link href="/urunler">Koleksiyonları keşfet</Link><Link href="/teklif">Projeniz için teklif alın</Link></div>
-    </div>
-    <div className="zHeroIndex"><b>01</b><span>ARVIONA / 2026</span></div>
+    <div className="zHeroCopy"><span>ARVIONA · KITCHEN · DOOR SYSTEMS · INTERIOR</span><h1>Hayallerinizdeki Mekânlar İçin <em>Modern Çözümler</em></h1><p>ARVIONA ile yaşam alanlarınıza estetik, kalite ve fonksiyonellik katın.</p><div className="zHeroActions"><Link href="/urunler">Ürünleri Keşfet →</Link></div></div>
   </section>
 
-  <section className="zStatement"><span>ARVIONA</span><h2>Yaşam alanları için<br/>zamansız bir tasarım dili.</h2><p>Malzeme, oran ve işlevi aynı çizgide buluşturuyor; konuttan toplu projelere kadar bütüncül çözümler üretiyoruz.</p></section>
+  <section className="approvedCategories">{collections.map(([href,img,title,text])=><Link href={href} className="approvedCategory" key={href}><div className="approvedCategoryImage"><Image src={img} alt={`ARVIONA ${title}`} fill quality={100} sizes="(max-width:900px) 100vw,33vw"/></div><div><h2>{title}</h2><p>{text}</p><b>Keşfet →</b></div></Link>)}</section>
 
-  <section className="zCollectionsHead"><span>KOLEKSİYONLAR</span><h2>Her mekân, ayrı bir karakter.</h2><p>Kapıdan mutfağa, banyodan proje detaylarına kadar aynı mimari dili sürdüren ürün grupları.</p></section>
-  <section className="zCollections">{collections.map(([href,img,no,title,tag])=><Link href={href} className="zCollection" key={href}><Image src={img} alt={`ARVIONA ${title}`} fill quality={95} sizes="(max-width:900px) 100vw,33vw"/><div className="zCollectionShade"/><div className="zCollectionCopy"><span>{no}</span><h3>{title}</h3><p>{tag}</p><b>Keşfet →</b></div></Link>)}</section>
+  <section className="approvedPartners"><span>PELİLAM</span><span>ASD LAMİNAT</span><span>ÇAMSAN ENTEGRE</span><span>KASTAMONU ENTEGRE</span><span>YILDIZ ENTEGRE</span><span>GENTAŞ</span></section>
 
-  <section className="zProject"><div className="zProjectVisual"><Image src="/project-concept.webp" alt="ARVIONA proje çözümleri" fill quality={100} sizes="(max-width:900px) 100vw,58vw"/></div><div className="zProjectCopy"><span>PROJELER İÇİN ARVIONA</span><h2>Ölçek büyür.<br/>Tasarım dili değişmez.</h2><p>Mimarlar, yükleniciler, oteller, villalar, toplu konut ve ticari projeler için ürün seçimi, üretim ve teklif sürecini tek noktada ele alıyoruz.</p><div className="zStats"><div><b>03</b><small>Ana ürün grubu</small></div><div><b>360°</b><small>Proje yaklaşımı</small></div></div><Link className="zDarkButton" href="/profesyoneller">Profesyoneller için →</Link></div></section>
+  <section className="approvedDesign"><div className="approvedDesignCopy"><span>KALİTEYİ DETAYLARDA HİSSEDİN</span><h2>Modern Yaşamın<br/>En Şık Hali</h2><p>ARVIONA, estetiği kaliteyle buluşturan tasarımlarıyla yaşam alanlarınıza değer katar.</p><Link href="/projeler">Projeleri İncele →</Link></div><div className="approvedDesignVisual"><Image src="/project-concept.webp" alt="ARVIONA modern iç mekân projesi" fill quality={100} sizes="(max-width:900px) 100vw,65vw"/></div></section>
 
-  <section className="zConfig"><span>KİŞİSELLEŞTİRME</span><h2>Seçin. Birleştirin.<br/>Mekânınızda görün.</h2><p>Model, dekor ve yüzey alternatiflerini bir araya getirerek kendi kombinasyonunuzu oluşturun.</p><div><Link href="/mutfak">Mutfak tasarla →</Link><Link href="/banyo">Banyo tasarla →</Link><Link href="/urunler">Kapı seç →</Link></div></section>
+  <section className="approvedTools"><div><span>TASARIM ARACI</span><h2>Kendi Tarzınızı Oluşturun</h2><p>Renk, model ve malzeme seçenekleriyle size özel kombinasyonlar oluşturun.</p></div><Link href="/urunler">Kapı Tasarımı →</Link><Link href="/mutfak#tasarla">Mutfak Tasarımı →</Link><Link href="/banyo#tasarla">Banyo Tasarımı →</Link></section>
 
-  <section className="zFinal"><span>ARVIONA PROJECT</span><h2>Projenizi birlikte<br/>şekillendirelim.</h2><Link href="/teklif">Teklif talebi oluştur →</Link></section>
+  <section className="approvedTrust"><div><b>◇</b><span>Uluslararası Kalite<br/>Standartları</span></div><div><b>⚙</b><span>Özel Tasarım<br/>Çözümleri</span></div><div><b>◇</b><span>Güvenilir İş<br/>Ortağı</span></div><div><b>◉</b><span>Proje Odaklı<br/>Destek</span></div></section>
 </main>}
