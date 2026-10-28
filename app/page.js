@@ -1,13 +1,33 @@
 import Link from "next/link";
 import Image from "next/image";
-const featured=[["am-01","AM-01","Açık Meşe"],["am-05","AM-05","Modern Ceviz"],["al-01","AL-01","Düz Lake"],["al-05","AL-05","Premium Lake"]];
-const partners=["Pelilam","ASD Laminat","Çamsan Entegre","Kastamonu Entegre","Yıldız Entegre","Gentaş"];
-function Featured(){return <div className="premiumProductGrid">{featured.map(([slug,code,name])=><Link href={`/urunler/${slug}`} className="premiumProduct" key={slug}><div><Image src={`/products/${slug}.webp`} alt={`${code} ${name}`} fill sizes="(max-width:700px) 50vw,25vw"/></div><span>{code}</span><h3>{name}</h3><small>Modeli incele ve renklerini seç →</small></Link>)}</div>}
-export default function Home(){return <main className="premiumHome"><section className="premiumHero"><Image src="/project-concept.webp" alt="ARVIONA kurumsal iç mekân tasarımı" fill priority sizes="100vw"/><div className="premiumHeroShade"/><div className="premiumHeroCopy"><span className="eyebrow">KITCHEN · DOOR SYSTEMS · INTERIOR</span><h1>Hayalinizdeki mekânı<br/>ARVIONA ile tasarlayın.</h1><p>Kapı, mutfak ve banyo çözümlerini model ve dekor seçenekleriyle kişiselleştirin. Tasarımınızı görün, kombinasyonunuzu oluşturun ve proje teklifinizi alın.</p><div className="actions"><Link className="btn" href="/urunler">Ürünleri Keşfet →</Link><Link className="premiumGhost" href="/teklif">Projeniz İçin Teklif Al</Link></div></div><div className="heroMetrics"><div><b>03</b><span>Ana ürün grubu</span></div><div><b>01</b><span>Tek tasarım dili</span></div><div><b>360°</b><span>Proje yaklaşımı</span></div></div></section>
-<section className="designIntro"><span className="eyebrow">ARVIONA CONFIGURATOR</span><h2>Seçin. Birleştirin.<br/>Mekânınızda görün.</h2><p>Ürün seçimini klasik katalog mantığından çıkarıyoruz. Kapınızın kanat, kasa ve pervazını; mutfak ve banyo mobilyalarınızın kapak ve gövde dekorlarını ayrı ayrı seçerek kombinasyonunuzu oluşturun.</p></section>
-<section className="premiumCategories"><Link href="/urunler" className="premiumCat"><Image src="/door-category.webp" alt="ARVIONA kapı koleksiyonu" fill sizes="(max-width:900px) 100vw,33vw"/><div className="catShade"/><div className="catContent"><span>01 / DOORS</span><h2>İç Mekân<br/>Kapıları</h2><p>Kanat · Kasa · Pervaz</p><b>Model seç & tasarla →</b></div></Link><Link href="/mutfak" className="premiumCat"><Image src="/kitchen-category.webp" alt="ARVIONA mutfak sistemleri" fill sizes="(max-width:900px) 100vw,33vw"/><div className="catShade"/><div className="catContent"><span>02 / KITCHENS</span><h2>Mutfak<br/>Sistemleri</h2><p>Kapak · Gövde · Dekor</p><b>Mutfağını tasarla →</b></div></Link><Link href="/banyo" className="premiumCat"><Image src="/bath-category.webp" alt="ARVIONA banyo mobilyaları" fill sizes="(max-width:900px) 100vw,33vw"/><div className="catShade"/><div className="catContent"><span>03 / BATHROOMS</span><h2>Banyo<br/>Mobilyaları</h2><p>Kapak · Gövde · Dekor</p><b>Banyonu tasarla →</b></div></Link></section>
-<section className="featuredDark"><div className="premiumSectionHead"><div><span className="eyebrow">FEATURED DOORS</span><h2>Öne Çıkan Modeller</h2></div><Link href="/urunler">Tüm koleksiyon →</Link></div><Featured/></section>
-<section className="configShowcase"><div className="configShowcaseVisual"><Image src="/kitchen-category.webp" alt="ARVIONA mutfak tasarım deneyimi" fill sizes="(max-width:900px) 100vw,60vw"/></div><div className="configShowcaseText"><span className="eyebrow">DESIGN YOUR SPACE</span><h2>Rengi sadece seçmeyin.<br/>Mekânda hissedin.</h2><p>Pelilam ve diğer dekor alternatifleriyle kombinasyonunuzu oluşturun. Dijital önizleme karar sürecini kolaylaştırır; nihai renk ve yüzey onayı fiziksel numune üzerinden yapılır.</p><div className="miniSteps"><span><b>01</b> Model seç</span><span><b>02</b> Dekorları belirle</span><span><b>03</b> Gör & teklif al</span></div><Link className="btn" href="/mutfak">Mutfak Tasarımını Aç →</Link></div></section>
-<section className="partnerBand"><div><span className="eyebrow">MATERIAL ECOSYSTEM</span><h2>Malzeme ve yüzey ekosistemi</h2><p>Projeye uygun dekor, panel ve yüzey alternatiflerini geniş bir üretici ekosistemi içinden değerlendiriyoruz.</p></div><div className="partnerGrid">{partners.map(x=><span key={x}>{x}</span>)}</div></section>
-<section className="professionalHome"><Image src="/project-concept.webp" alt="ARVIONA profesyonel projeler" fill sizes="100vw"/><div/><div className="professionalCopy"><span className="eyebrow">FOR PROFESSIONALS</span><h2>Proje ölçeğinde<br/>ARVIONA.</h2><p>Mimarlar, yükleniciler, otel, villa, toplu konut ve ticari proje ekipleri için ürün seçimi ve teklif sürecini tek noktada ele alın.</p><div className="actions"><Link className="btn" href="/profesyoneller">Profesyoneller İçin →</Link><Link className="premiumGhost" href="/teklif">Teklif Talebi</Link></div></div></section>
-<section className="finalCta"><span className="eyebrow">START YOUR PROJECT</span><h2>Bir fikri, seçilebilir bir<br/>mekâna dönüştürelim.</h2><p>Kapı, mutfak veya banyo modelinizi seçin; kombinasyonunuzu oluşturun ve proje detaylarınızla teklif isteyin.</p><Link className="btn" href="/teklif">Projeniz İçin Teklif Al →</Link></section></main>}
+
+const collections=[
+  ["/urunler","/door-category.webp","01 — KAPI","İç Mekân Kapıları","DOĞAL. SADE. ZAMANSIZ."],
+  ["/mutfak","/kitchen-category.webp","02 — MUTFAK","Mutfak Sistemleri","RAFİNE. İŞLEVSEL. ÖZGÜN."],
+  ["/banyo","/bath-category.webp","03 — BANYO","Banyo Mobilyaları","SAKİN. MODERN. DENGELİ."]
+];
+
+export default function Home(){return <main className="zHome">
+  <section className="zHero">
+    <Image src="/hero.webp" alt="ARVIONA modern iç mekân" fill priority quality={100} sizes="100vw"/>
+    <div className="zHeroShade"/>
+    <div className="zHeroCopy">
+      <span>ARVIONA · KITCHEN · DOOR SYSTEMS · INTERIOR</span>
+      <h1>Mekânın karakteri.<br/>Detaylarda başlar.</h1>
+      <p>Kapı, mutfak ve banyo sistemlerinde çağdaş tasarım; güçlü malzeme dili ve projeye özel üretim.</p>
+      <div className="zHeroActions"><Link href="/urunler">Koleksiyonları keşfet</Link><Link href="/teklif">Projeniz için teklif alın</Link></div>
+    </div>
+    <div className="zHeroIndex"><b>01</b><span>ARVIONA / 2026</span></div>
+  </section>
+
+  <section className="zStatement"><span>ARVIONA</span><h2>Yaşam alanları için<br/>zamansız bir tasarım dili.</h2><p>Malzeme, oran ve işlevi aynı çizgide buluşturuyor; konuttan toplu projelere kadar bütüncül çözümler üretiyoruz.</p></section>
+
+  <section className="zCollectionsHead"><span>KOLEKSİYONLAR</span><h2>Her mekân, ayrı bir karakter.</h2><p>Kapıdan mutfağa, banyodan proje detaylarına kadar aynı mimari dili sürdüren ürün grupları.</p></section>
+  <section className="zCollections">{collections.map(([href,img,no,title,tag])=><Link href={href} className="zCollection" key={href}><Image src={img} alt={`ARVIONA ${title}`} fill quality={95} sizes="(max-width:900px) 100vw,33vw"/><div className="zCollectionShade"/><div className="zCollectionCopy"><span>{no}</span><h3>{title}</h3><p>{tag}</p><b>Keşfet →</b></div></Link>)}</section>
+
+  <section className="zProject"><div className="zProjectVisual"><Image src="/project-concept.webp" alt="ARVIONA proje çözümleri" fill quality={100} sizes="(max-width:900px) 100vw,58vw"/></div><div className="zProjectCopy"><span>PROJELER İÇİN ARVIONA</span><h2>Ölçek büyür.<br/>Tasarım dili değişmez.</h2><p>Mimarlar, yükleniciler, oteller, villalar, toplu konut ve ticari projeler için ürün seçimi, üretim ve teklif sürecini tek noktada ele alıyoruz.</p><div className="zStats"><div><b>03</b><small>Ana ürün grubu</small></div><div><b>360°</b><small>Proje yaklaşımı</small></div></div><Link className="zDarkButton" href="/profesyoneller">Profesyoneller için →</Link></div></section>
+
+  <section className="zConfig"><span>KİŞİSELLEŞTİRME</span><h2>Seçin. Birleştirin.<br/>Mekânınızda görün.</h2><p>Model, dekor ve yüzey alternatiflerini bir araya getirerek kendi kombinasyonunuzu oluşturun.</p><div><Link href="/mutfak">Mutfak tasarla →</Link><Link href="/banyo">Banyo tasarla →</Link><Link href="/urunler">Kapı seç →</Link></div></section>
+
+  <section className="zFinal"><span>ARVIONA PROJECT</span><h2>Projenizi birlikte<br/>şekillendirelim.</h2><Link href="/teklif">Teklif talebi oluştur →</Link></section>
+</main>}
